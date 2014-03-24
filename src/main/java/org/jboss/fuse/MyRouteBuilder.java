@@ -11,15 +11,10 @@ public class MyRouteBuilder extends RouteBuilder {
 
     public void configure() {
 
-        // Send Files to a directory scanned
-        // There are used for SEND PROCESS
-        from("file:src/data/send?noop=true")
-          .to("file:target/messages/send");
-
         // Read files to be send to the SFTP Server
         // Insert Record in a DB
-        from("file:target/messages/send")
-          .onException(Exception.class)
+        from("file:{{file_source_send}}?noop=true")
+        .onException(Exception.class)
                 .handled(true)
                 .log("Exception occurred : ${exception.stacktrace}")
                 .end()
@@ -32,10 +27,9 @@ public class MyRouteBuilder extends RouteBuilder {
           // Send file to SFTP Server
           .to("sftp://{{username}}@localhost:22{{sftp_send_path}}?password={{password}}");
 
-        // Send Files to a directory scanned
-        // They are used for RESPONSE process
+        // Send Files to a directory scanned by the SFTP Server
         // We delay to 5s the responses
-        from("file:src/data/response?noop=true")
+        from("file:{{file_source_response}}?noop=true")
             .delayer(5000)
             .to("file:{{target_message_response}}");
 
