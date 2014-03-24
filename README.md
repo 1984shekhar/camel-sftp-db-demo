@@ -4,7 +4,7 @@ Camel SFTP / DB Demo
 Pre-requisites
 ==============
 
-* Download and install H2 - http://www.h2database.com/h2-2014-01-18.zip
+* Download and install H2 - http://www.h2database.com/h2-2014-01-18.zip (version 170)
 
 * Open a Terminal and move to the directory bin of H2 database
 
@@ -59,7 +59,6 @@ query and validate that the column response should contain a content
 that a profile using `camel, camel-ftp, camel-spring ...` has been created
 
 https://www.dropbox.com/s/t77jljs9rmjdf77/Screenshot%202014-03-24%2014.47.56.png
-
 
 DB Access
 =========
