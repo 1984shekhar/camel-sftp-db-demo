@@ -55,10 +55,8 @@ https://bytebucket.org/cmoulliard/demo-camel-sftp-db/raw/e7a986c9aff1141b2d4480e
     fabric:create
 * Deploy the profile of the project by running this command after https://github.com/fabric8io/fabric8/blob/master/docs/mavenPlugin.md#configuring-the-plugin[changing your maven settings.xml file]
     mvn fabric8:deploy
-* If the build succeeds, connect to the web console to verify that the profile has been created using this [url](http://localhost:8181/hawtio/index.html#/wiki/branch/1.0/view/fabric/profiles/sftp/db/demo.profile) where you can control
+* If the build succeeds, connect to the web console to verify that the profile has been created using the hawtio web console - [url](http://localhost:8181/hawtio/index.html#/wiki/branch/1.0/view/fabric/profiles/sftp/db/demo.profile) where you can control
 that a profile using `camel, camel-ftp, camel-spring ...` has been created
-
-image::http://www.dropbox.com/s/t77jljs9rmjdf77/Screenshot%202014-03-24%2014.47.56.png[width="50%",height="50%"]
 
 or run this command on the command line of the root container to display the content of the profile
 
@@ -87,7 +85,7 @@ or run this command on the command line of the root container to display the con
 
      fabric:container-create-child --profile sftp-db-demo --jmx-user admin --jmx-password admin root demo
 
-* Connect to the server and look to the log to see if messages / files have been received from the SFTP Server 
+* Connect to the server and look to the log to see if messages / files have been received from the SFTP Server
 
 DB Access
 =========
