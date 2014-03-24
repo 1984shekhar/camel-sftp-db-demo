@@ -46,11 +46,11 @@ https://bytebucket.org/cmoulliard/demo-camel-sftp-db/raw/e7a986c9aff1141b2d4480e
 
 2) Run on JBoss Fuse
 
-* Download and install https://repository.jboss.org/nexus/content/repositories/fs-beta/org/jboss/fuse/jboss-fuse-full/6.1.0.redhat-355/[JBoss Fuse 6.1]
+* Download and install https://repository.jboss.org/nexus/content/groups/ea/io/fabric8/fabric8-karaf/1.0.0.redhat-372//[JBoss Fuse 6.1]
 * Open a terminal and move to the bin directory
 * Before to start the server, edit the file ../etc/users.properties and uncomment #admin=admin,admin line
 * Start JBoss Fuse
-    ./fuse
+    ./fusefabric
 * Setup Fabric server when the Karaf console appears
     fabric:create
 * Deploy the profile of the project by running this command after https://github.com/fabric8io/fabric8/blob/master/docs/mavenPlugin.md#configuring-the-plugin[changing your maven settings.xml file]
