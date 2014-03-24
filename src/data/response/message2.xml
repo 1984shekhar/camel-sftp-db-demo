@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<request>
+    <id>222</id>
+    <code>A222</code>
+    <message>Hello 222</message>
+    <response>Response from Dummy Target Systems XXX</response>
+</request>
