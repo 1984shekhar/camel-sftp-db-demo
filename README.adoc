@@ -58,7 +58,7 @@ query and validate that the column response should contain a content
 * If the build succeeds, connect to the web console to verify that the profile has been created using this [url](http://localhost:8181/hawtio/index.html#/wiki/branch/1.0/view/fabric/profiles/sftp/db/demo.profile) where you can control
 that a profile using `camel, camel-ftp, camel-spring ...` has been created
 
-(https://www.dropbox.com/s/t77jljs9rmjdf77/Screenshot%202014-03-24%2014.47.56.png)
+image::http://www.dropbox.com/s/t77jljs9rmjdf77/Screenshot%202014-03-24%2014.47.56.png[width="50%",height="50%"]
 
 
 DB Access
