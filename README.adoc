@@ -39,7 +39,7 @@ sftp_receive_path=
 
 REMARK : The H2 DB must be started before to launch camel:run
 
-* To verify that responseq has been received from SFTP server, run the following select `SELECT * FROM REQUEST`
+* To verify that response has been received from SFTP server, run the following select `SELECT * FROM REQUEST`
 query and validate that the column response should contain a content
 
 https://bytebucket.org/cmoulliard/demo-camel-sftp-db/raw/e7a986c9aff1141b2d4480e2f65cc1d5fa91efd1/result.png?token=b117247599f7b8fdbdff9fc71268f5f6099418cf[Result]
@@ -63,25 +63,31 @@ image::http://www.dropbox.com/s/t77jljs9rmjdf77/Screenshot%202014-03-24%2014.47.
 or run this command on the command line of the root container to display the content of the profile
 
     fabric:profile-display sftp-db-demo
-Profile id: sftp-db-demo
-Version   : 1.0
-Attributes:
-	parents: feature-camel
-Containers:
+    Profile id: sftp-db-demo
+    Version   : 1.0
+    Attributes:
+    	parents: feature-camel
+    Containers:
 
-Container settings
-----------------------------
-Features :
-	camel-core
-	camel-spring
-	spring
-	spring-jdbc
-	fabric-bundle
-	camel-ftp
+    Container settings
+    ----------------------------
+    Features :
+    	camel-core
+    	camel-spring
+    	spring
+    	spring-jdbc
+    	fabric-bundle
+    	camel-ftp
 
-Bundles :
-	wrap:mvn:com.h2database/h2/1.3.170
-	mvn:org.jboss.fuse/demo-camel/1.0-SNAPSHOT
+    Bundles :
+    	wrap:mvn:com.h2database/h2/1.3.170
+    	mvn:org.jboss.fuse/demo-camel/1.0-SNAPSHOT
+
+* Next create a new Fuse container using this profile
+
+     fabric:container-create-child --profile sftp-db-demo --jmx-user admin --jmx-password admin root demo
+
+* Connect to the server and look to the log to see if messages / files have been received from the SFTP Server 
 
 DB Access
 =========
